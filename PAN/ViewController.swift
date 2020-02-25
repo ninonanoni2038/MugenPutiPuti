@@ -25,6 +25,15 @@ class ViewController: UIViewController {
     let player9 = player()
     let player10 = player()
     let player11 = player()
+    let changeSoundPlayer1 = player()
+    let changeSoundPlayer2 = player()
+    let changeSoundPlayer3 = player()
+    let changeSoundPlayer4 = player()
+    let changeSoundPlayer5 = player()
+    
+    //    var colorFlg: Int = 3 //デフォルトは3で水色
+    
+    var soundName: String = "kati"
     
     var number : Int = 0
     var katiNumber : Int = 0
@@ -67,42 +76,13 @@ class ViewController: UIViewController {
         resetButton.titleLabel!.font = UIFont(name: "DIN Alternate",size: CGFloat(20))
     }
     
-    func shortVibrate() {
-        AudioServicesPlaySystemSound(1519);
-        AudioServicesDisposeSystemSoundID(1519);
-    }
     
     @IBAction func pan(sender:UIButton){
         katiNumber += 1
         katiLabel.text = String(katiNumber)
         shortVibrate()
-        switch sender.tag {
-        case 1:
-            player1.playSound(name: "kati")
-        case 2:
-            player2.playSound(name: "kati")
-        case 3:
-            player3.playSound(name: "kati")
-        case 4:
-            player4.playSound(name: "kati")
-        case 5:
-            player5.playSound(name: "kati")
-        case 6:
-            player6.playSound(name: "kati")
-        case 7:
-            player7.playSound(name: "kati")
-        case 8:
-            player8.playSound(name: "kati")
-        case 9:
-            player9.playSound(name: "kati")
-        case 10:
-            player10.playSound(name: "kati")
-        case 11:
-            player11.playSound(name: "kati")
-        default:
-            break
-        }
         
+        playSound(sender: sender)
         number += 1
         
         sender.setBackgroundImage(UIImage(named:"Active.png"), for: .normal)
@@ -162,7 +142,7 @@ class ViewController: UIViewController {
         button9.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
         number = 0
         
-        player10.playSound(name: "kati")
+        player10.playSound(name: soundName)
         
         
     }
@@ -178,15 +158,91 @@ class ViewController: UIViewController {
         
         let text = "無限ぷちぷちで\(katiLabel.text!)回ぷちぷちしたよ"
         let items = [text]
-        
         // UIActivityViewControllerをインスタンス化
         let activityVc = UIActivityViewController(activityItems: items, applicationActivities: nil)
         
+        activityVc.popoverPresentationController?.sourceView = self.view
+        activityVc.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.width/2,y: 50,width: 0,height: 0);
         // UIAcitivityViewControllerを表示
         self.present(activityVc, animated: true, completion: nil)
         
-        player11.playSound(name: "kati")
+        player11.playSound(name: soundName)
         
+    }
+    
+    @IBAction func changeSound(sender:UIButton){
+        switch sender.tag {
+        case 1:
+            soundName = "puti"
+            changeSoundPlayer1.playSound(name: soundName)
+        case 2:
+            soundName = "pon"
+            changeSoundPlayer2.playSound(name: soundName)
+        case 3:
+            soundName = "kati"
+            changeSoundPlayer3.playSound(name: soundName)
+        case 4:
+            soundName = "puyon"
+            changeSoundPlayer4.playSound(name: soundName)
+        case 5:
+            soundName = ""
+            changeSoundPlayer5.playSound(name: soundName)
+        default:
+            break
+        }
+        
+    }
+    
+    //    @IBAction func changeColor(sender:UIButton){
+    //        switch sender.tag {
+    //               case 1:
+    //                   colorFlg = 1
+    //            //viweの背景を変える
+    //               case 2:
+    //                   colorFlg = 2
+    //               case 3:
+    //                   colorFlg = 3
+    //               case 4:
+    //                   colorFlg = 4
+    //               case 5:
+    //                   colorFlg = 5
+    //               default:
+    //                   break
+    //               }
+    //    }
+    
+    func shortVibrate() {
+        AudioServicesPlaySystemSound(1519);
+        AudioServicesDisposeSystemSoundID(1519);
+    }
+    
+    func playSound(sender:UIButton){
+        switch sender.tag {
+        case 1:
+            player1.playSound(name: soundName)
+        case 2:
+            player2.playSound(name: soundName)
+        case 3:
+            player3.playSound(name: soundName)
+        case 4:
+            player4.playSound(name: soundName)
+        case 5:
+            player5.playSound(name: soundName)
+        case 6:
+            player6.playSound(name: soundName)
+        case 7:
+            player7.playSound(name: soundName)
+        case 8:
+            player8.playSound(name: soundName)
+        case 9:
+            player9.playSound(name: soundName)
+        case 10:
+            player10.playSound(name: soundName)
+        case 11:
+            player11.playSound(name: soundName)
+        default:
+            break
+        }
     }
     
 }

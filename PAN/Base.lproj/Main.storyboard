@@ -152,49 +152,80 @@
                                     <action selector="sns" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSx-e1-eqd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-si-dTL">
-                                <rect key="frame" x="85" y="84" width="30" height="30"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-si-dTL">
+                                <rect key="frame" x="85" y="84.5" width="30" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="35U-gu-4uA"/>
-                                    <constraint firstAttribute="width" constant="30" id="fzV-XA-Tit"/>
+                                    <constraint firstAttribute="width" constant="30" id="d5a-em-QDV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="iU0-Qn-guw"/>
                                 </constraints>
-                                <state key="normal" title="Pink"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="music.note" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XKe-49-pA4"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exz-RY-6FY">
-                                <rect key="frame" x="205" y="84" width="30" height="30"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exz-RY-6FY">
+                                <rect key="frame" x="205" y="84.5" width="30" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Lhl-GW-OCl"/>
                                     <constraint firstAttribute="width" constant="30" id="cTf-0o-iak"/>
                                 </constraints>
-                                <state key="normal" title="緑"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="music.note" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLD-XF-Url"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u0-hD-xUA">
-                                <rect key="frame" x="25" y="84" width="30" height="30"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u0-hD-xUA">
+                                <rect key="frame" x="25" y="84.5" width="30" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="2TN-UH-Xkb"/>
                                     <constraint firstAttribute="width" constant="30" id="dPB-Ha-i4O"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dQt-3V-oAD"/>
                                     <constraint firstAttribute="height" constant="30" id="pJn-qf-XYb"/>
                                 </constraints>
-                                <state key="normal" title="紫"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="music.note" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Bv-zG-Djl"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o79-cz-T1y">
-                                <rect key="frame" x="265" y="84" width="30" height="30"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o79-cz-T1y">
+                                <rect key="frame" x="265" y="84.5" width="30" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Q8l-PL-hf4"/>
                                     <constraint firstAttribute="height" constant="30" id="Vdh-bc-16u"/>
                                     <constraint firstAttribute="width" constant="30" id="YD2-Kz-VyN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="r8K-ih-Rwq"/>
                                 </constraints>
-                                <state key="normal" title="黄"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="music.note" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j7P-fP-TpD"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jA9-Vf-QzR">
-                                <rect key="frame" x="145" y="84" width="30" height="30"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jA9-Vf-QzR">
+                                <rect key="frame" x="145" y="84.5" width="30" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VEr-ZX-UU4"/>
                                     <constraint firstAttribute="width" constant="30" id="qIa-F1-bvN"/>
                                 </constraints>
-                                <state key="normal" title="水"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="music.note" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xhi-Vi-jLd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411764705883" green="0.72156862745098038" blue="0.93333333333333335" alpha="1" colorSpace="deviceRGB"/>
@@ -262,5 +293,6 @@
     <resources>
         <image name="AppName.png" width="2300" height="1026"/>
         <image name="Inactive.png" width="1024" height="1024"/>
+        <image name="music.note" catalog="system" width="48" height="64"/>
     </resources>
 </document>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DB5A21E240176E100034AE0 /* pon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A21D240176E100034AE0 /* pon.mp3 */; };
+		9DB5A2202401779300034AE0 /* puti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A21F2401779300034AE0 /* puti.mp3 */; };
+		9DB5A222240177C200034AE0 /* puyon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A221240177C200034AE0 /* puyon.mp3 */; };
+		9DB5A2242401781B00034AE0 /* pya.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A2232401781B00034AE0 /* pya.mp3 */; };
 		9DC38D6B23EF096C003EABD8 /* kati.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DC38D6A23EF096C003EABD8 /* kati.mp3 */; };
 		9DDCA96423EF0744000925D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA96323EF0744000925D7 /* AppDelegate.swift */; };
 		9DDCA96623EF0744000925D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA96523EF0744000925D7 /* SceneDelegate.swift */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9DB5A21D240176E100034AE0 /* pon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pon.mp3; sourceTree = "<group>"; };
+		9DB5A21F2401779300034AE0 /* puti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = puti.mp3; sourceTree = "<group>"; };
+		9DB5A221240177C200034AE0 /* puyon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = puyon.mp3; sourceTree = "<group>"; };
+		9DB5A2232401781B00034AE0 /* pya.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pya.mp3; sourceTree = "<group>"; };
 		9DC38D6A23EF096C003EABD8 /* kati.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kati.mp3; sourceTree = "<group>"; };
 		9DDCA96023EF0744000925D7 /* PAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDCA96323EF0744000925D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				9DC38D6A23EF096C003EABD8 /* kati.mp3 */,
+				9DB5A21D240176E100034AE0 /* pon.mp3 */,
+				9DB5A21F2401779300034AE0 /* puti.mp3 */,
+				9DB5A221240177C200034AE0 /* puyon.mp3 */,
+				9DB5A2232401781B00034AE0 /* pya.mp3 */,
 				9DE4007B23F95DBF00FAC368 /* background.png */,
 				9DE4007323F95A4900FAC368 /* Active.png */,
 				9DE4007423F95A4900FAC368 /* AppIcon.png */,
@@ -250,12 +262,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB5A2202401779300034AE0 /* puti.mp3 in Resources */,
 				9DC38D6B23EF096C003EABD8 /* kati.mp3 in Resources */,
 				9DDCA97023EF0745000925D7 /* LaunchScreen.storyboard in Resources */,
 				9DE4007923F95A4A00FAC368 /* Inactive.png in Resources */,
 				9DE4007823F95A4A00FAC368 /* AppIcon.png in Resources */,
 				9DE4008023F96E0500FAC368 /* AppName.png in Resources */,
 				9DDCA96D23EF0745000925D7 /* Assets.xcassets in Resources */,
+				9DB5A2242401781B00034AE0 /* pya.mp3 in Resources */,
+				9DB5A21E240176E100034AE0 /* pon.mp3 in Resources */,
+				9DB5A222240177C200034AE0 /* puyon.mp3 in Resources */,
 				9DDCA96B23EF0744000925D7 /* Main.storyboard in Resources */,
 				9DE4007C23F95DBF00FAC368 /* background.png in Resources */,
 				9DE4007723F95A4A00FAC368 /* Active.png in Resources */,
@@ -459,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = LD239J59KZ;
 				INFOPLIST_FILE = PAN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -479,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = LD239J59KZ;
 				INFOPLIST_FILE = PAN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
