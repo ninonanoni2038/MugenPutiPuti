@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PAN" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="無限ぷちぷち" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,111 +153,72 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-si-dTL">
-                                <rect key="frame" x="85" y="84.5" width="30" height="29"/>
+                                <rect key="frame" x="79" y="84" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="35U-gu-4uA"/>
                                     <constraint firstAttribute="width" constant="30" id="d5a-em-QDV"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="iU0-Qn-guw"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="music.note" catalog="system">
+                                <state key="normal" title="◀︎">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XKe-49-pA4"/>
+                                    <action selector="changeSoundLeft" destination="BYZ-38-t0r" eventType="touchUpInside" id="ubA-0M-XLG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exz-RY-6FY">
-                                <rect key="frame" x="205" y="84.5" width="30" height="29"/>
+                                <rect key="frame" x="211" y="84" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Lhl-GW-OCl"/>
                                     <constraint firstAttribute="width" constant="30" id="cTf-0o-iak"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="music.note" catalog="system">
+                                <state key="normal" title="▶︎">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLD-XF-Url"/>
+                                    <action selector="changeSoundRight" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lqx-e2-Z5o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u0-hD-xUA">
-                                <rect key="frame" x="25" y="84.5" width="30" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="2TN-UH-Xkb"/>
-                                    <constraint firstAttribute="width" constant="30" id="dPB-Ha-i4O"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dQt-3V-oAD"/>
-                                    <constraint firstAttribute="height" constant="30" id="pJn-qf-XYb"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="music.note" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Bv-zG-Djl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o79-cz-T1y">
-                                <rect key="frame" x="265" y="84.5" width="30" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Q8l-PL-hf4"/>
-                                    <constraint firstAttribute="height" constant="30" id="Vdh-bc-16u"/>
-                                    <constraint firstAttribute="width" constant="30" id="YD2-Kz-VyN"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="r8K-ih-Rwq"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="music.note" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j7P-fP-TpD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jA9-Vf-QzR">
-                                <rect key="frame" x="145" y="84.5" width="30" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="VEr-ZX-UU4"/>
-                                    <constraint firstAttribute="width" constant="30" id="qIa-F1-bvN"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="music.note" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeSoundWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xhi-Vi-jLd"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-0h-eYk">
+                                <rect key="frame" x="110" y="84" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411764705883" green="0.72156862745098038" blue="0.93333333333333335" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="yEo-si-dTL" firstAttribute="leading" secondItem="3u0-hD-xUA" secondAttribute="trailing" constant="30" id="1NE-Lv-emm"/>
                             <constraint firstItem="Exz-RY-6FY" firstAttribute="top" secondItem="NbK-me-9a0" secondAttribute="bottom" id="3Hr-Kl-x3k"/>
                             <constraint firstItem="f7G-AT-EBj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3lM-qr-7BU"/>
                             <constraint firstItem="n1j-dc-BFn" firstAttribute="top" secondItem="JVj-yh-5fW" secondAttribute="bottom" constant="10" id="4Jl-Lv-sz8"/>
                             <constraint firstItem="ZQN-lY-4wl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Kv-Dz-oKJ"/>
                             <constraint firstItem="rXp-Px-3V5" firstAttribute="top" secondItem="jQu-fd-Ax5" secondAttribute="bottom" constant="10" id="5FT-ag-RFy"/>
                             <constraint firstItem="pHj-NQ-z7j" firstAttribute="leading" secondItem="jQu-fd-Ax5" secondAttribute="trailing" constant="10" id="5an-2n-ULY"/>
-                            <constraint firstItem="jA9-Vf-QzR" firstAttribute="top" secondItem="NbK-me-9a0" secondAttribute="bottom" id="80Q-hm-fYG"/>
-                            <constraint firstItem="3u0-hD-xUA" firstAttribute="top" secondItem="NbK-me-9a0" secondAttribute="bottom" id="8Mt-FR-HT8"/>
                             <constraint firstItem="JVN-5q-wh4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AuM-r8-6WG"/>
+                            <constraint firstItem="HKz-0h-eYk" firstAttribute="bottom" secondItem="yEo-si-dTL" secondAttribute="bottom" id="B4O-3N-OiJ"/>
                             <constraint firstItem="f7G-AT-EBj" firstAttribute="leading" secondItem="3Ot-pO-UkD" secondAttribute="trailing" constant="10" id="BzR-l3-kJJ"/>
                             <constraint firstItem="3Ot-pO-UkD" firstAttribute="top" secondItem="vhY-Pf-4Ko" secondAttribute="bottom" constant="10" id="DIN-i5-dgZ"/>
                             <constraint firstItem="ZQN-lY-4wl" firstAttribute="leading" secondItem="vhY-Pf-4Ko" secondAttribute="trailing" constant="10" id="DK3-A3-gxl"/>
                             <constraint firstItem="jQu-fd-Ax5" firstAttribute="top" secondItem="NbK-me-9a0" secondAttribute="bottom" constant="40" id="Dyz-zp-Mym"/>
+                            <constraint firstItem="HKz-0h-eYk" firstAttribute="leading" secondItem="yEo-si-dTL" secondAttribute="trailing" constant="1" id="EkJ-As-S8k"/>
                             <constraint firstItem="rXp-Px-3V5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GKE-oY-RgL"/>
                             <constraint firstItem="JVj-yh-5fW" firstAttribute="leading" secondItem="rXp-Px-3V5" secondAttribute="trailing" constant="10" id="GRX-Fc-qqB"/>
                             <constraint firstItem="JVj-yh-5fW" firstAttribute="top" secondItem="pHj-NQ-z7j" secondAttribute="bottom" constant="10" id="Gaj-cs-4T2"/>
+                            <constraint firstItem="Exz-RY-6FY" firstAttribute="leading" secondItem="HKz-0h-eYk" secondAttribute="trailing" constant="1" id="IFb-SE-g0X"/>
                             <constraint firstItem="jQu-fd-Ax5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IHj-ix-PdY"/>
-                            <constraint firstItem="o79-cz-T1y" firstAttribute="top" secondItem="NbK-me-9a0" secondAttribute="bottom" id="ITL-EX-T2b"/>
+                            <constraint firstItem="HKz-0h-eYk" firstAttribute="leading" secondItem="jQu-fd-Ax5" secondAttribute="leading" id="Icz-hn-poV"/>
                             <constraint firstItem="NbK-me-9a0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OWg-Uz-QeD"/>
                             <constraint firstItem="jQu-fd-Ax5" firstAttribute="leading" secondItem="HZv-yO-eeF" secondAttribute="trailing" constant="10" id="PkF-zY-7Pv"/>
-                            <constraint firstItem="jA9-Vf-QzR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SVf-9o-V7z"/>
                             <constraint firstItem="n1j-dc-BFn" firstAttribute="leading" secondItem="ZQN-lY-4wl" secondAttribute="trailing" constant="10" id="Sf9-bg-lbF"/>
                             <constraint firstItem="JVj-yh-5fW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TlC-TE-ksr"/>
+                            <constraint firstItem="HKz-0h-eYk" firstAttribute="trailing" secondItem="jQu-fd-Ax5" secondAttribute="trailing" id="WYO-F4-9vo"/>
                             <constraint firstItem="kkR-q9-Gfh" firstAttribute="top" secondItem="n1j-dc-BFn" secondAttribute="bottom" constant="10" id="Wh1-rt-Uec"/>
-                            <constraint firstItem="o79-cz-T1y" firstAttribute="leading" secondItem="Exz-RY-6FY" secondAttribute="trailing" constant="30" id="ak4-2N-7Sf"/>
+                            <constraint firstItem="HKz-0h-eYk" firstAttribute="top" secondItem="yEo-si-dTL" secondAttribute="top" id="YK6-HH-4hI"/>
                             <constraint firstItem="ZQN-lY-4wl" firstAttribute="top" secondItem="rXp-Px-3V5" secondAttribute="bottom" constant="10" id="brt-MB-kYd"/>
-                            <constraint firstItem="Exz-RY-6FY" firstAttribute="leading" secondItem="jA9-Vf-QzR" secondAttribute="trailing" constant="30" id="eig-Tj-oE8"/>
                             <constraint firstItem="NbK-me-9a0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gqT-iD-kqt"/>
                             <constraint firstItem="f7G-AT-EBj" firstAttribute="top" secondItem="ZQN-lY-4wl" secondAttribute="bottom" constant="20" id="hjm-mQ-Xqm"/>
                             <constraint firstItem="vhY-Pf-4Ko" firstAttribute="top" secondItem="JVN-5q-wh4" secondAttribute="bottom" constant="10" id="l2K-vR-h8N"/>
@@ -265,7 +226,6 @@
                             <constraint firstItem="kkR-q9-Gfh" firstAttribute="leading" secondItem="f7G-AT-EBj" secondAttribute="trailing" constant="10" id="raH-go-Ie6"/>
                             <constraint firstItem="rXp-Px-3V5" firstAttribute="leading" secondItem="JVN-5q-wh4" secondAttribute="trailing" constant="10" id="tjD-uC-RhP"/>
                             <constraint firstItem="JVN-5q-wh4" firstAttribute="top" secondItem="HZv-yO-eeF" secondAttribute="bottom" constant="10" id="w2V-0S-rTA"/>
-                            <constraint firstItem="jA9-Vf-QzR" firstAttribute="leading" secondItem="yEo-si-dTL" secondAttribute="trailing" constant="30" id="xtg-xx-jwO"/>
                             <constraint firstItem="yEo-si-dTL" firstAttribute="top" secondItem="NbK-me-9a0" secondAttribute="bottom" id="yJG-Pi-toR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -283,6 +243,7 @@
                         <outlet property="katiLabel" destination="f7G-AT-EBj" id="jQG-bp-dJA"/>
                         <outlet property="resetButton" destination="3Ot-pO-UkD" id="AMV-zD-by5"/>
                         <outlet property="snsButton" destination="kkR-q9-Gfh" id="Ajh-f5-zsE"/>
+                        <outlet property="soundLabel" destination="HKz-0h-eYk" id="64X-j1-D8o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -293,6 +254,5 @@
     <resources>
         <image name="AppName.png" width="2300" height="1026"/>
         <image name="Inactive.png" width="1024" height="1024"/>
-        <image name="music.note" catalog="system" width="48" height="64"/>
     </resources>
 </document>

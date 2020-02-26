@@ -33,7 +33,10 @@ class ViewController: UIViewController {
     
     //    var colorFlg: Int = 3 //デフォルトは3で水色
     
-    var soundName: String = "kati"
+    var soundName: String = "かち"
+    var soundArray:[String] = ["かち","ぽん","ぷち","ぷよん","ぴゃっ"]
+    @IBOutlet var soundLabel:UILabel!
+    var soundIndex:Int = 0
     
     var number : Int = 0
     var katiNumber : Int = 0
@@ -74,6 +77,9 @@ class ViewController: UIViewController {
         resetButton.setTitle("Reset", for: .normal)
         resetButton.setTitleColor(UIColor.white, for: .normal)
         resetButton.titleLabel!.font = UIFont(name: "DIN Alternate",size: CGFloat(20))
+        
+        soundLabel.text = soundArray[soundIndex]
+        
     }
     
     
@@ -156,11 +162,16 @@ class ViewController: UIViewController {
             self.snsButton.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
         }
         
-        let text = "無限ぷちぷちで\(katiLabel.text!)回ぷちぷちしたよ"
+        let text = "無限ぷちぷちで\(katiLabel.text!)回ぷちぷちしたよ。https://apps.apple.com/jp/app/%E7%84%A1%E9%99%90%E3%81%B7%E3%81%A1%E3%81%B7%E3%81%A1/id1498318394"
         let items = [text]
         // UIActivityViewControllerをインスタンス化
         let activityVc = UIActivityViewController(activityItems: items, applicationActivities: nil)
         
+        
+        activityVc.excludedActivityTypes = [
+            UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"),
+            UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension"),
+            UIActivity.ActivityType.airDrop]
         activityVc.popoverPresentationController?.sourceView = self.view
         activityVc.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.width/2,y: 50,width: 0,height: 0);
         // UIAcitivityViewControllerを表示
@@ -170,28 +181,52 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func changeSound(sender:UIButton){
-        switch sender.tag {
-        case 1:
-            soundName = "puti"
-            changeSoundPlayer1.playSound(name: soundName)
-        case 2:
-            soundName = "pon"
-            changeSoundPlayer2.playSound(name: soundName)
-        case 3:
-            soundName = "kati"
-            changeSoundPlayer3.playSound(name: soundName)
-        case 4:
-            soundName = "puyon"
-            changeSoundPlayer4.playSound(name: soundName)
-        case 5:
-            soundName = ""
-            changeSoundPlayer5.playSound(name: soundName)
-        default:
-            break
+    @IBAction func changeSoundLeft(){
+        if soundIndex > 0 {
+            soundIndex = soundIndex - 1
+            soundName = soundArray[soundIndex]
+            soundLabel.text = soundArray[soundIndex]
+        }else{
+            soundIndex = 4
+            soundName = soundArray[soundIndex]
+            soundLabel.text = soundArray[soundIndex]
         }
-        
     }
+    
+    @IBAction func changeSoundRight(){
+        if soundIndex < 4 {
+            soundIndex = soundIndex + 1
+            soundName = soundArray[soundIndex]
+            soundLabel.text = soundArray[soundIndex]
+        }else{
+            soundIndex = 0
+            soundName = soundArray[soundIndex]
+            soundLabel.text = soundArray[soundIndex]
+        }
+    }
+    
+//    @IBAction func changeSound(sender:UIButton){
+//        switch sender.tag {
+//        case 1:
+//            soundName = "puti"
+//            changeSoundPlayer1.playSound(name: soundName)
+//        case 2:
+//            soundName = "pon"
+//            changeSoundPlayer2.playSound(name: soundName)
+//        case 3:
+//            soundName = "kati"
+//            changeSoundPlayer3.playSound(name: soundName)
+//        case 4:
+//            soundName = "puyon"
+//            changeSoundPlayer4.playSound(name: soundName)
+//        case 5:
+//            soundName = "pya"
+//            changeSoundPlayer5.playSound(name: soundName)
+//        default:
+//            break
+//        }
+//
+//    }
     
     //    @IBAction func changeColor(sender:UIButton){
     //        switch sender.tag {

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DB5A21E240176E100034AE0 /* pon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A21D240176E100034AE0 /* pon.mp3 */; };
-		9DB5A2202401779300034AE0 /* puti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A21F2401779300034AE0 /* puti.mp3 */; };
-		9DB5A222240177C200034AE0 /* puyon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A221240177C200034AE0 /* puyon.mp3 */; };
-		9DB5A2242401781B00034AE0 /* pya.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A2232401781B00034AE0 /* pya.mp3 */; };
-		9DC38D6B23EF096C003EABD8 /* kati.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DC38D6A23EF096C003EABD8 /* kati.mp3 */; };
+		9DB5A21E240176E100034AE0 /* ぽん.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A21D240176E100034AE0 /* ぽん.mp3 */; };
+		9DB5A2202401779300034AE0 /* ぷち.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A21F2401779300034AE0 /* ぷち.mp3 */; };
+		9DB5A222240177C200034AE0 /* ぷよん.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A221240177C200034AE0 /* ぷよん.mp3 */; };
+		9DB5A2242401781B00034AE0 /* ぴゃっ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A2232401781B00034AE0 /* ぴゃっ.mp3 */; };
+		9DC38D6B23EF096C003EABD8 /* かち.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DC38D6A23EF096C003EABD8 /* かち.mp3 */; };
 		9DDCA96423EF0744000925D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA96323EF0744000925D7 /* AppDelegate.swift */; };
 		9DDCA96623EF0744000925D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA96523EF0744000925D7 /* SceneDelegate.swift */; };
 		9DDCA96823EF0744000925D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA96723EF0744000925D7 /* ViewController.swift */; };
@@ -45,12 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9DB5A21D240176E100034AE0 /* pon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pon.mp3; sourceTree = "<group>"; };
-		9DB5A21F2401779300034AE0 /* puti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = puti.mp3; sourceTree = "<group>"; };
-		9DB5A221240177C200034AE0 /* puyon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = puyon.mp3; sourceTree = "<group>"; };
-		9DB5A2232401781B00034AE0 /* pya.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pya.mp3; sourceTree = "<group>"; };
-		9DC38D6A23EF096C003EABD8 /* kati.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kati.mp3; sourceTree = "<group>"; };
-		9DDCA96023EF0744000925D7 /* PAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DB5A21D240176E100034AE0 /* ぽん.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぽん.mp3"; sourceTree = "<group>"; };
+		9DB5A21F2401779300034AE0 /* ぷち.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぷち.mp3"; sourceTree = "<group>"; };
+		9DB5A221240177C200034AE0 /* ぷよん.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぷよん.mp3"; sourceTree = "<group>"; };
+		9DB5A2232401781B00034AE0 /* ぴゃっ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぴゃっ.mp3"; sourceTree = "<group>"; };
+		9DB7FDF02406359E00D556F0 /* Kaiso-Next-B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kaiso-Next-B.otf"; sourceTree = "<group>"; };
+		9DC38D6A23EF096C003EABD8 /* かち.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "かち.mp3"; sourceTree = "<group>"; };
+		9DDCA96023EF0744000925D7 /* 無限ぷちぷち.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "無限ぷちぷち.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDCA96323EF0744000925D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DDCA96523EF0744000925D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9DDCA96723EF0744000925D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +110,7 @@
 		9DDCA96123EF0744000925D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9DDCA96023EF0744000925D7 /* PAN.app */,
+				9DDCA96023EF0744000925D7 /* 無限ぷちぷち.app */,
 				9DDCA97623EF0745000925D7 /* PANTests.xctest */,
 				9DDCA98123EF0745000925D7 /* PANUITests.xctest */,
 			);
@@ -119,11 +120,12 @@
 		9DDCA96223EF0744000925D7 /* PAN */ = {
 			isa = PBXGroup;
 			children = (
-				9DC38D6A23EF096C003EABD8 /* kati.mp3 */,
-				9DB5A21D240176E100034AE0 /* pon.mp3 */,
-				9DB5A21F2401779300034AE0 /* puti.mp3 */,
-				9DB5A221240177C200034AE0 /* puyon.mp3 */,
-				9DB5A2232401781B00034AE0 /* pya.mp3 */,
+				9DB7FDF02406359E00D556F0 /* Kaiso-Next-B.otf */,
+				9DC38D6A23EF096C003EABD8 /* かち.mp3 */,
+				9DB5A21D240176E100034AE0 /* ぽん.mp3 */,
+				9DB5A21F2401779300034AE0 /* ぷち.mp3 */,
+				9DB5A221240177C200034AE0 /* ぷよん.mp3 */,
+				9DB5A2232401781B00034AE0 /* ぴゃっ.mp3 */,
 				9DE4007B23F95DBF00FAC368 /* background.png */,
 				9DE4007323F95A4900FAC368 /* Active.png */,
 				9DE4007423F95A4900FAC368 /* AppIcon.png */,
@@ -175,7 +177,7 @@
 			);
 			name = PAN;
 			productName = PAN;
-			productReference = 9DDCA96023EF0744000925D7 /* PAN.app */;
+			productReference = 9DDCA96023EF0744000925D7 /* 無限ぷちぷち.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9DDCA97523EF0745000925D7 /* PANTests */ = {
@@ -262,16 +264,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DB5A2202401779300034AE0 /* puti.mp3 in Resources */,
-				9DC38D6B23EF096C003EABD8 /* kati.mp3 in Resources */,
+				9DB5A2202401779300034AE0 /* ぷち.mp3 in Resources */,
+				9DC38D6B23EF096C003EABD8 /* かち.mp3 in Resources */,
 				9DDCA97023EF0745000925D7 /* LaunchScreen.storyboard in Resources */,
 				9DE4007923F95A4A00FAC368 /* Inactive.png in Resources */,
 				9DE4007823F95A4A00FAC368 /* AppIcon.png in Resources */,
 				9DE4008023F96E0500FAC368 /* AppName.png in Resources */,
 				9DDCA96D23EF0745000925D7 /* Assets.xcassets in Resources */,
-				9DB5A2242401781B00034AE0 /* pya.mp3 in Resources */,
-				9DB5A21E240176E100034AE0 /* pon.mp3 in Resources */,
-				9DB5A222240177C200034AE0 /* puyon.mp3 in Resources */,
+				9DB5A2242401781B00034AE0 /* ぴゃっ.mp3 in Resources */,
+				9DB5A21E240176E100034AE0 /* ぽん.mp3 in Resources */,
+				9DB5A222240177C200034AE0 /* ぷよん.mp3 in Resources */,
 				9DDCA96B23EF0744000925D7 /* Main.storyboard in Resources */,
 				9DE4007C23F95DBF00FAC368 /* background.png in Resources */,
 				9DE4007723F95A4A00FAC368 /* Active.png in Resources */,
@@ -484,7 +486,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nino.MugenPutiPuti;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "無限ぷちぷち";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,7 +506,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nino.MugenPutiPuti;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "無限ぷちぷち";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
