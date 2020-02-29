@@ -9,10 +9,12 @@
 import UIKit
 import AVFoundation
 import AudioToolbox
+import GoogleMobileAds
 
 
-
-class ViewController: UIViewController {
+class ViewController: UIViewController, GADBannerViewDelegate {
+    
+    var bannerView: GADBannerView!
     
     let player1 = player()
     let player2 = player()
@@ -80,6 +82,43 @@ class ViewController: UIViewController {
         
         soundLabel.text = soundArray[soundIndex]
         
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+//        let request = GADRequest()
+//        request.testDevices = [ "2077ef9a63d2b398840261c8221a0c9b" ]
+        bannerView.load(GADRequest())
+        
+       
+        bannerView.delegate = self
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+        ])
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     
@@ -171,7 +210,14 @@ class ViewController: UIViewController {
         activityVc.excludedActivityTypes = [
             UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"),
             UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension"),
-            UIActivity.ActivityType.airDrop]
+            UIActivity.ActivityType(rawValue: "com.google"),
+            UIActivity.ActivityType.airDrop,
+            UIActivity.ActivityType.message,
+            UIActivity.ActivityType.mail,
+            UIActivity.ActivityType.copyToPasteboard,
+            UIActivity.ActivityType.assignToContact,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.addToReadingList,]
         activityVc.popoverPresentationController?.sourceView = self.view
         activityVc.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.width/2,y: 50,width: 0,height: 0);
         // UIAcitivityViewControllerを表示
@@ -204,47 +250,6 @@ class ViewController: UIViewController {
             soundLabel.text = soundArray[soundIndex]
         }
     }
-    
-//    @IBAction func changeSound(sender:UIButton){
-//        switch sender.tag {
-//        case 1:
-//            soundName = "puti"
-//            changeSoundPlayer1.playSound(name: soundName)
-//        case 2:
-//            soundName = "pon"
-//            changeSoundPlayer2.playSound(name: soundName)
-//        case 3:
-//            soundName = "kati"
-//            changeSoundPlayer3.playSound(name: soundName)
-//        case 4:
-//            soundName = "puyon"
-//            changeSoundPlayer4.playSound(name: soundName)
-//        case 5:
-//            soundName = "pya"
-//            changeSoundPlayer5.playSound(name: soundName)
-//        default:
-//            break
-//        }
-//
-//    }
-    
-    //    @IBAction func changeColor(sender:UIButton){
-    //        switch sender.tag {
-    //               case 1:
-    //                   colorFlg = 1
-    //            //viweの背景を変える
-    //               case 2:
-    //                   colorFlg = 2
-    //               case 3:
-    //                   colorFlg = 3
-    //               case 4:
-    //                   colorFlg = 4
-    //               case 5:
-    //                   colorFlg = 5
-    //               default:
-    //                   break
-    //               }
-    //    }
     
     func shortVibrate() {
         AudioServicesPlaySystemSound(1519);
