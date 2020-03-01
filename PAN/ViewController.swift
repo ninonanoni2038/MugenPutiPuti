@@ -59,6 +59,8 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         button1.adjustsImageWhenHighlighted = false
