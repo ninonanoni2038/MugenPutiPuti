@@ -9,24 +9,19 @@
 /* Begin PBXBuildFile section */
 		56B7A5C94852F03DE0FF9BD2 /* Pods_PAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640A3BE8D342A06AA53B0E3A /* Pods_PAN.framework */; };
 		681D80DAEFC25A38D4F44F57 /* Pods_PANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A281368CACCF53BB2573EE2 /* Pods_PANUITests.framework */; };
-		9DB5A21E240176E100034AE0 /* ぽん.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A21D240176E100034AE0 /* ぽん.mp3 */; };
-		9DB5A2202401779300034AE0 /* ぷち.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A21F2401779300034AE0 /* ぷち.mp3 */; };
-		9DB5A222240177C200034AE0 /* ぷよん.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A221240177C200034AE0 /* ぷよん.mp3 */; };
-		9DB5A2242401781B00034AE0 /* ぴゃっ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB5A2232401781B00034AE0 /* ぴゃっ.mp3 */; };
-		9DC38D6B23EF096C003EABD8 /* かち.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DC38D6A23EF096C003EABD8 /* かち.mp3 */; };
+		9D13DC272446C2F300EAC75C /* ぷち.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D13DC222446C2F300EAC75C /* ぷち.mp3 */; };
+		9D13DC282446C2F300EAC75C /* かち.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D13DC232446C2F300EAC75C /* かち.mp3 */; };
+		9D13DC292446C2F300EAC75C /* ぽん.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D13DC242446C2F300EAC75C /* ぽん.mp3 */; };
+		9D13DC2A2446C2F300EAC75C /* ぴゃっ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D13DC252446C2F300EAC75C /* ぴゃっ.mp3 */; };
+		9D13DC2B2446C2F300EAC75C /* ぷよん.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D13DC262446C2F300EAC75C /* ぷよん.mp3 */; };
+		9DD1C2622446CE1200A9CC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD1C2612446CE1100A9CC9B /* Assets.xcassets */; };
 		9DDCA96423EF0744000925D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA96323EF0744000925D7 /* AppDelegate.swift */; };
 		9DDCA96623EF0744000925D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA96523EF0744000925D7 /* SceneDelegate.swift */; };
 		9DDCA96823EF0744000925D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA96723EF0744000925D7 /* ViewController.swift */; };
 		9DDCA96B23EF0744000925D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDCA96923EF0744000925D7 /* Main.storyboard */; };
-		9DDCA96D23EF0745000925D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DDCA96C23EF0745000925D7 /* Assets.xcassets */; };
 		9DDCA97023EF0745000925D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDCA96E23EF0745000925D7 /* LaunchScreen.storyboard */; };
 		9DDCA97B23EF0745000925D7 /* PANTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA97A23EF0745000925D7 /* PANTests.swift */; };
 		9DDCA98623EF0745000925D7 /* PANUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCA98523EF0745000925D7 /* PANUITests.swift */; };
-		9DE4007723F95A4A00FAC368 /* Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE4007323F95A4900FAC368 /* Active.png */; };
-		9DE4007823F95A4A00FAC368 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE4007423F95A4900FAC368 /* AppIcon.png */; };
-		9DE4007923F95A4A00FAC368 /* Inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE4007523F95A4900FAC368 /* Inactive.png */; };
-		9DE4007C23F95DBF00FAC368 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE4007B23F95DBF00FAC368 /* background.png */; };
-		9DE4008023F96E0500FAC368 /* AppName.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE4007F23F96E0400FAC368 /* AppName.png */; };
 		A9EAE3144E515536DE49BF6C /* Pods_PANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86903808F586E9F210BF9311 /* Pods_PANTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,17 +51,17 @@
 		640A3BE8D342A06AA53B0E3A /* Pods_PAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86903808F586E9F210BF9311 /* Pods_PANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		989DB69C3A7257612E0B00BD /* Pods-PAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAN.release.xcconfig"; path = "Target Support Files/Pods-PAN/Pods-PAN.release.xcconfig"; sourceTree = "<group>"; };
-		9DB5A21D240176E100034AE0 /* ぽん.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぽん.mp3"; sourceTree = "<group>"; };
-		9DB5A21F2401779300034AE0 /* ぷち.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぷち.mp3"; sourceTree = "<group>"; };
-		9DB5A221240177C200034AE0 /* ぷよん.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぷよん.mp3"; sourceTree = "<group>"; };
-		9DB5A2232401781B00034AE0 /* ぴゃっ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぴゃっ.mp3"; sourceTree = "<group>"; };
-		9DC38D6A23EF096C003EABD8 /* かち.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "かち.mp3"; sourceTree = "<group>"; };
-		9DDCA96023EF0744000925D7 /* 無限ぷちぷち.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "無限ぷちぷち.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D13DC222446C2F300EAC75C /* ぷち.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぷち.mp3"; sourceTree = "<group>"; };
+		9D13DC232446C2F300EAC75C /* かち.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "かち.mp3"; sourceTree = "<group>"; };
+		9D13DC242446C2F300EAC75C /* ぽん.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぽん.mp3"; sourceTree = "<group>"; };
+		9D13DC252446C2F300EAC75C /* ぴゃっ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぴゃっ.mp3"; sourceTree = "<group>"; };
+		9D13DC262446C2F300EAC75C /* ぷよん.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ぷよん.mp3"; sourceTree = "<group>"; };
+		9DD1C2612446CE1100A9CC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DDCA96023EF0744000925D7 /* MugenPutiPuti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MugenPutiPuti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDCA96323EF0744000925D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DDCA96523EF0744000925D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9DDCA96723EF0744000925D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9DDCA96A23EF0744000925D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9DDCA96C23EF0745000925D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DDCA96F23EF0745000925D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DDCA97123EF0745000925D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DDCA97623EF0745000925D7 /* PANTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PANTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,11 +70,6 @@
 		9DDCA98123EF0745000925D7 /* PANUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PANUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDCA98523EF0745000925D7 /* PANUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PANUITests.swift; sourceTree = "<group>"; };
 		9DDCA98723EF0745000925D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DE4007323F95A4900FAC368 /* Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Active.png; sourceTree = "<group>"; };
-		9DE4007423F95A4900FAC368 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
-		9DE4007523F95A4900FAC368 /* Inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Inactive.png; sourceTree = "<group>"; };
-		9DE4007B23F95DBF00FAC368 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		9DE4007F23F96E0400FAC368 /* AppName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppName.png; path = "../../PAN素材/AppName.png"; sourceTree = "<group>"; };
 		FA0103ABBCB3C9A6381817B3 /* Pods-PANUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PANUITests.release.xcconfig"; path = "Target Support Files/Pods-PANUITests/Pods-PANUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +129,7 @@
 		9DDCA96123EF0744000925D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9DDCA96023EF0744000925D7 /* 無限ぷちぷち.app */,
+				9DDCA96023EF0744000925D7 /* MugenPutiPuti.app */,
 				9DDCA97623EF0745000925D7 /* PANTests.xctest */,
 				9DDCA98123EF0745000925D7 /* PANUITests.xctest */,
 			);
@@ -149,21 +139,16 @@
 		9DDCA96223EF0744000925D7 /* PAN */ = {
 			isa = PBXGroup;
 			children = (
-				9DC38D6A23EF096C003EABD8 /* かち.mp3 */,
-				9DB5A21D240176E100034AE0 /* ぽん.mp3 */,
-				9DB5A21F2401779300034AE0 /* ぷち.mp3 */,
-				9DB5A221240177C200034AE0 /* ぷよん.mp3 */,
-				9DB5A2232401781B00034AE0 /* ぴゃっ.mp3 */,
-				9DE4007B23F95DBF00FAC368 /* background.png */,
-				9DE4007323F95A4900FAC368 /* Active.png */,
-				9DE4007423F95A4900FAC368 /* AppIcon.png */,
-				9DE4007523F95A4900FAC368 /* Inactive.png */,
-				9DE4007F23F96E0400FAC368 /* AppName.png */,
+				9D13DC232446C2F300EAC75C /* かち.mp3 */,
+				9D13DC252446C2F300EAC75C /* ぴゃっ.mp3 */,
+				9D13DC222446C2F300EAC75C /* ぷち.mp3 */,
+				9D13DC262446C2F300EAC75C /* ぷよん.mp3 */,
+				9D13DC242446C2F300EAC75C /* ぽん.mp3 */,
 				9DDCA96323EF0744000925D7 /* AppDelegate.swift */,
 				9DDCA96523EF0744000925D7 /* SceneDelegate.swift */,
 				9DDCA96723EF0744000925D7 /* ViewController.swift */,
+				9DD1C2612446CE1100A9CC9B /* Assets.xcassets */,
 				9DDCA96923EF0744000925D7 /* Main.storyboard */,
-				9DDCA96C23EF0745000925D7 /* Assets.xcassets */,
 				9DDCA96E23EF0745000925D7 /* LaunchScreen.storyboard */,
 				9DDCA97123EF0745000925D7 /* Info.plist */,
 			);
@@ -217,7 +202,7 @@
 			);
 			name = PAN;
 			productName = PAN;
-			productReference = 9DDCA96023EF0744000925D7 /* 無限ぷちぷち.app */;
+			productReference = 9DDCA96023EF0744000925D7 /* MugenPutiPuti.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9DDCA97523EF0745000925D7 /* PANTests */ = {
@@ -306,19 +291,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DB5A2202401779300034AE0 /* ぷち.mp3 in Resources */,
-				9DC38D6B23EF096C003EABD8 /* かち.mp3 in Resources */,
+				9D13DC2A2446C2F300EAC75C /* ぴゃっ.mp3 in Resources */,
+				9D13DC292446C2F300EAC75C /* ぽん.mp3 in Resources */,
+				9D13DC282446C2F300EAC75C /* かち.mp3 in Resources */,
+				9D13DC272446C2F300EAC75C /* ぷち.mp3 in Resources */,
+				9D13DC2B2446C2F300EAC75C /* ぷよん.mp3 in Resources */,
 				9DDCA97023EF0745000925D7 /* LaunchScreen.storyboard in Resources */,
-				9DE4007923F95A4A00FAC368 /* Inactive.png in Resources */,
-				9DE4007823F95A4A00FAC368 /* AppIcon.png in Resources */,
-				9DE4008023F96E0500FAC368 /* AppName.png in Resources */,
-				9DDCA96D23EF0745000925D7 /* Assets.xcassets in Resources */,
-				9DB5A2242401781B00034AE0 /* ぴゃっ.mp3 in Resources */,
-				9DB5A21E240176E100034AE0 /* ぽん.mp3 in Resources */,
-				9DB5A222240177C200034AE0 /* ぷよん.mp3 in Resources */,
+				9DD1C2622446CE1200A9CC9B /* Assets.xcassets in Resources */,
 				9DDCA96B23EF0744000925D7 /* Main.storyboard in Resources */,
-				9DE4007C23F95DBF00FAC368 /* background.png in Resources */,
-				9DE4007723F95A4A00FAC368 /* Active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,16 +586,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2.1;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LD239J59KZ;
 				INFOPLIST_FILE = PAN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nino.MugenPutiPuti;
-				PRODUCT_NAME = "無限ぷちぷち";
+				PRODUCT_NAME = MugenPutiPuti;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -627,16 +607,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2.1;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LD239J59KZ;
 				INFOPLIST_FILE = PAN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nino.MugenPutiPuti;
-				PRODUCT_NAME = "無限ぷちぷち";
+				PRODUCT_NAME = MugenPutiPuti;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,116 +12,116 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="無限ぷちぷち" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppName.png" translatesAutoresizingMaskIntoConstraints="NO" id="NbK-me-9a0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppName" translatesAutoresizingMaskIntoConstraints="NO" id="NbK-me-9a0">
+                                <rect key="frame" x="27.5" y="0.0" width="320" height="133.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="zMr-Ym-etL"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQu-fd-Ax5">
-                                <rect key="frame" x="110" y="124" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="173.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="qlq-Rq-noM"/>
                                     <constraint firstAttribute="height" constant="100" id="sRa-hw-1lq"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="panWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="4Ck-kt-M3L"/>
+                                    <action selector="pushWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEn-sy-HGC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZv-yO-eeF">
-                                <rect key="frame" x="0.0" y="124" width="100" height="100"/>
+                                <rect key="frame" x="27.5" y="173.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="R80-DS-gH2"/>
                                     <constraint firstAttribute="width" constant="100" id="yyY-om-A2w"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="panWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="aHK-vT-gWG"/>
+                                    <action selector="pushWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPP-Gf-ypP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHj-NQ-z7j">
-                                <rect key="frame" x="220" y="124" width="100" height="100"/>
+                                <rect key="frame" x="247.5" y="173.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="iLW-Xb-n6D"/>
                                     <constraint firstAttribute="height" constant="100" id="ihs-hB-lmN"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="panWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="mme-zc-1eu"/>
+                                    <action selector="pushWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgX-nX-aSV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVj-yh-5fW">
-                                <rect key="frame" x="220" y="234" width="100" height="100"/>
+                                <rect key="frame" x="247.5" y="283.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Gei-e6-jJ8"/>
                                     <constraint firstAttribute="width" constant="100" id="szy-Kn-0hS"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="panWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="GWt-aH-qim"/>
+                                    <action selector="pushWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Yx-nc-050"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXp-Px-3V5">
-                                <rect key="frame" x="110" y="234" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="kLz-rm-tB6"/>
                                     <constraint firstAttribute="width" constant="100" id="xd2-by-wZn"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="panWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="fNT-cs-gyn"/>
+                                    <action selector="pushWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvY-Ti-3M3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVN-5q-wh4">
-                                <rect key="frame" x="0.0" y="234" width="100" height="100"/>
+                                <rect key="frame" x="27.5" y="283.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="cr1-8b-fKY"/>
                                     <constraint firstAttribute="height" constant="100" id="t08-KP-X4b"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="panWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="Z4m-Tu-deJ"/>
+                                    <action selector="pushWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oup-RI-J2j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhY-Pf-4Ko">
-                                <rect key="frame" x="0.0" y="344" width="100" height="100"/>
+                                <rect key="frame" x="27.5" y="393.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Y16-sX-Z7v"/>
                                     <constraint firstAttribute="width" constant="100" id="u0j-Lm-TBX"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="panWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="qtW-bF-oM6"/>
+                                    <action selector="pushWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cz3-bg-6jL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQN-lY-4wl">
-                                <rect key="frame" x="110" y="344" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="393.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="JEC-ke-UnI"/>
                                     <constraint firstAttribute="height" constant="100" id="zz9-98-yRU"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="panWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="fyZ-gV-ECK"/>
+                                    <action selector="pushWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2f-mw-k1d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1j-dc-BFn">
-                                <rect key="frame" x="220" y="344" width="100" height="100"/>
+                                <rect key="frame" x="247.5" y="393.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="WP0-l6-DBN"/>
                                     <constraint firstAttribute="height" constant="100" id="pcr-Ja-zKF"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="panWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="gwN-eQ-Pai"/>
+                                    <action selector="pushWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGO-fO-pID"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7G-AT-EBj">
-                                <rect key="frame" x="110" y="464" width="100" height="50"/>
+                                <rect key="frame" x="137.5" y="513.5" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="gfS-9y-IVy"/>
                                     <constraint firstAttribute="height" constant="50" id="vqA-Vq-ODv"/>
@@ -131,29 +131,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ot-pO-UkD">
-                                <rect key="frame" x="0.0" y="454" width="100" height="100"/>
+                                <rect key="frame" x="27.5" y="503.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="JQG-Er-PpD"/>
                                     <constraint firstAttribute="height" constant="100" id="tOT-1g-5LM"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="b4q-b6-J3p"/>
+                                    <action selector="start" destination="BYZ-38-t0r" eventType="touchUpInside" id="xJb-af-jQf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkR-q9-Gfh">
-                                <rect key="frame" x="220" y="454" width="100" height="100"/>
+                                <rect key="frame" x="247.5" y="503.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Iy1-dI-F0S"/>
                                     <constraint firstAttribute="height" constant="100" id="oJy-Lv-KKs"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Inactive.png"/>
+                                <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
                                     <action selector="sns" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSx-e1-eqd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-si-dTL">
-                                <rect key="frame" x="79" y="84" width="30" height="30"/>
+                                <rect key="frame" x="106.5" y="133.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="35U-gu-4uA"/>
                                     <constraint firstAttribute="width" constant="30" id="d5a-em-QDV"/>
@@ -169,7 +169,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exz-RY-6FY">
-                                <rect key="frame" x="211" y="84" width="30" height="30"/>
+                                <rect key="frame" x="238.5" y="133.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Lhl-GW-OCl"/>
                                     <constraint firstAttribute="width" constant="30" id="cTf-0o-iak"/>
@@ -183,8 +183,8 @@
                                     <action selector="changeSoundRight" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lqx-e2-Z5o"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-0h-eYk">
-                                <rect key="frame" x="110" y="84" width="100" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音を選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-0h-eYk">
+                                <rect key="frame" x="137.5" y="133.5" width="100" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -252,7 +252,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppName.png" width="2300" height="1026"/>
-        <image name="Inactive.png" width="1024" height="1024"/>
+        <image name="AppName" width="2300" height="1026"/>
+        <image name="Inactive" width="1024" height="1024"/>
     </resources>
 </document>

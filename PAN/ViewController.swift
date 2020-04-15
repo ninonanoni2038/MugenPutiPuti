@@ -12,9 +12,17 @@ import AudioToolbox
 import GoogleMobileAds
 
 
-class ViewController: UIViewController, GADBannerViewDelegate {
+class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDelegate {
     
     var bannerView: GADBannerView!
+    var interstitial: GADInterstitial!
+    
+    var buttonArray:[UIButton]!
+    var buttonShuffledArray:[UIButton]!
+    var gameIndex:Int = 0
+    var timeCount = 30.0
+    var resetCount = -1
+    
     
     let player1 = player()
     let player2 = player()
@@ -27,13 +35,15 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     let player9 = player()
     let player10 = player()
     let player11 = player()
+    let player12 = player()
     let changeSoundPlayer1 = player()
     let changeSoundPlayer2 = player()
     let changeSoundPlayer3 = player()
     let changeSoundPlayer4 = player()
     let changeSoundPlayer5 = player()
     
-    //    var colorFlg: Int = 3 //デフォルトは3で水色
+    var firstLaunch: Bool = true
+    var firstLaunchSaveData:UserDefaults = UserDefaults.standard
     
     var soundName: String = "かち"
     var soundArray:[String] = ["かち","ぽん","ぷち","ぷよん","ぴゃっ"]
@@ -63,39 +73,70 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        button1.adjustsImageWhenHighlighted = false
-        button2.adjustsImageWhenHighlighted = false
-        button3.adjustsImageWhenHighlighted = false
-        button4.adjustsImageWhenHighlighted = false
-        button5.adjustsImageWhenHighlighted = false
-        button6.adjustsImageWhenHighlighted = false
-        button7.adjustsImageWhenHighlighted = false
-        button8.adjustsImageWhenHighlighted = false
-        button9.adjustsImageWhenHighlighted = false
+        
+        buttonArray=[button1,button2,button3,button4,button5,button6,button7,button8,button9]
+        for i in 0...8{
+            buttonArray[i].adjustsImageWhenHighlighted = false
+            buttonArray[i].isEnabled = false
+        }
         resetButton.adjustsImageWhenHighlighted = false
         snsButton.adjustsImageWhenHighlighted = false
+        
         
         snsButton.setTitle("Share", for: .normal)
         snsButton.setTitleColor(UIColor.white, for: .normal)
         snsButton.titleLabel!.font = UIFont(name: "DIN Alternate",size: CGFloat(20))
-        resetButton.setTitle("Reset", for: .normal)
+        resetButton.setTitle("Start", for: .normal)
         resetButton.setTitleColor(UIColor.white, for: .normal)
         resetButton.titleLabel!.font = UIFont(name: "DIN Alternate",size: CGFloat(20))
         
-        soundLabel.text = soundArray[soundIndex]
         
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-4698067178614890/3086835091"
         bannerView.rootViewController = self
-//        let request = GADRequest()
-//        request.testDevices = [ "2077ef9a63d2b398840261c8221a0c9b" ]
         bannerView.load(GADRequest())
         
-       
         bannerView.delegate = self
+        
+        interstitial = createAndLoadInterstitial()
+        let request = GADRequest()
+        interstitial.load(request)
+    }
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+      var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.delegate = self
+      interstitial.load(GADRequest())
+      return interstitial
+    }
+
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+      interstitial = createAndLoadInterstitial()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if firstLaunchSaveData.object(forKey: "launch") != nil{
+            firstLaunch = firstLaunchSaveData.object(forKey: "launch") as! Bool
+        }
+        if firstLaunch == true {
+            // ダイアログ(AlertControllerのインスタンス)を生成します
+            //   titleには、ダイアログの表題として表示される文字列を指定します
+            //   messageには、ダイアログの説明として表示される文字列を指定します
+            let dialog = UIAlertController(title: "このアプリは、音が出ます。ご利用の際はマナーモードをオフにして音をだしてお楽しみください！", message: "", preferredStyle: .alert)
+            // 選択肢(ボタン)を2つ(OKとCancel)追加します
+            //   titleには、選択肢として表示される文字列を指定します
+            //   styleには、通常は「.default」、キャンセルなど操作を無効にするものは「.cancel」、削除など注意して選択すべきものは「.destructive」を指定します
+            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            // 生成したダイアログを実際に表示します
+            self.present(dialog, animated: true, completion: nil)
+            firstLaunch = false
+            firstLaunchSaveData.set(firstLaunch, forKey: "launch")
+        }
+      super.viewDidAppear(animated)
+      
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
@@ -230,6 +271,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     }
     
     @IBAction func changeSoundLeft(){
+        
         if soundIndex > 0 {
             soundIndex = soundIndex - 1
             soundName = soundArray[soundIndex]
@@ -239,6 +281,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             soundName = soundArray[soundIndex]
             soundLabel.text = soundArray[soundIndex]
         }
+        player12.playSound(name: soundName)
     }
     
     @IBAction func changeSoundRight(){
@@ -251,6 +294,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             soundName = soundArray[soundIndex]
             soundLabel.text = soundArray[soundIndex]
         }
+        player12.playSound(name: soundName)
     }
     
     func shortVibrate() {
@@ -259,6 +303,9 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     }
     
     func playSound(sender:UIButton){
+        
+      //  players[sender.tag-1].playSound(name: soundName)
+        
         switch sender.tag {
         case 1:
             player1.playSound(name: soundName)
@@ -309,3 +356,75 @@ class player{
     }
 }
 
+
+//ゲーム性のところ
+extension ViewController{
+    @IBAction func start(){
+        timeCount = 30.0
+        let timer = Timer.scheduledTimer(timeInterval: 0.01,
+                                     target: self,
+                                     selector: #selector(self.timerCounter),
+                                     userInfo: nil,
+                                     repeats: true)
+        buttonReset()
+        resetButton.setTitle("Restart", for: .normal)
+        
+        if resetCount < 2{
+            resetCount += 1
+        }else{
+            resetCount = 0
+            if interstitial.isReady {
+              interstitial.present(fromRootViewController: self)
+            }
+        }
+        
+    }
+    
+    
+    
+    
+    @objc func timerCounter() {
+        if timeCount > 0{
+            timeCount -= 0.01
+            soundLabel.text = String(timeCount)
+        }else{
+            timeCount = 0
+            soundLabel.text = String("終了")
+            for i in 0...8{
+                buttonArray[i].isEnabled = false
+                buttonArray[i].setBackgroundImage(UIImage(named:"Active.png"), for: .normal)
+                buttonShuffledArray[i].setTitle("", for: .normal)
+            }
+        }
+    }
+    
+    @IBAction func push(sender:UIButton){
+        katiNumber += 1
+        katiLabel.text = String(katiNumber)
+        shortVibrate()
+        
+        playSound(sender: sender)
+        number += 1
+        
+        sender.setBackgroundImage(UIImage(named:"Active.png"), for: .normal)
+        sender.isEnabled = false
+        if gameIndex < 8{
+            gameIndex = gameIndex + 1
+            buttonShuffledArray[gameIndex].isEnabled = true
+        }else{
+            buttonReset()
+        }
+    }
+    func buttonReset(){
+        buttonShuffledArray = buttonArray.shuffled()
+        gameIndex = 0
+        for i in 0...8{
+            buttonShuffledArray[i].isEnabled = false
+            buttonShuffledArray[i].setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
+            buttonShuffledArray[i].setTitle(String(i + 1), for: .normal)
+            buttonShuffledArray[i].setTitleColor(.white, for: .normal)
+            buttonShuffledArray[i].titleLabel!.font = UIFont(name: "DIN Alternate",size: CGFloat(24))
+        }
+        buttonShuffledArray[gameIndex].isEnabled = true
+    }
+}
