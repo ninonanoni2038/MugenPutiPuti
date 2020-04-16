@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="無限ぷちぷち" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MugenPutiPuti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="start" destination="BYZ-38-t0r" eventType="touchUpInside" id="xJb-af-jQf"/>
+                                    <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="zkC-me-Hg2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkR-q9-Gfh">
@@ -149,7 +149,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Inactive"/>
                                 <connections>
-                                    <action selector="sns" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSx-e1-eqd"/>
+                                    <action selector="gamePlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQ1-WA-aBl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-si-dTL">

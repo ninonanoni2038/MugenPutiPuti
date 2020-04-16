@@ -22,7 +22,9 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
     var gameIndex:Int = 0
     var timeCount = 30.0
     var resetCount = -1
+    var timer:Timer!
     
+    var playMode = false
     
     let player1 = player()
     let player2 = player()
@@ -75,18 +77,20 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
         super.viewDidLoad()
         
         buttonArray=[button1,button2,button3,button4,button5,button6,button7,button8,button9]
+        buttonShuffledArray = buttonArray.shuffled()
         for i in 0...8{
             buttonArray[i].adjustsImageWhenHighlighted = false
-            buttonArray[i].isEnabled = false
+//            buttonArray[i].isEnabled = false
         }
         resetButton.adjustsImageWhenHighlighted = false
         snsButton.adjustsImageWhenHighlighted = false
         
-        
-        snsButton.setTitle("Share", for: .normal)
+        snsButton.titleLabel?.numberOfLines = 2
+        snsButton.titleLabel?.textAlignment = NSTextAlignment.center
+        snsButton.setTitle("Play\nGame", for: .normal)
         snsButton.setTitleColor(UIColor.white, for: .normal)
         snsButton.titleLabel!.font = UIFont(name: "DIN Alternate",size: CGFloat(20))
-        resetButton.setTitle("Start", for: .normal)
+        resetButton.setTitle("Reset", for: .normal)
         resetButton.setTitleColor(UIColor.white, for: .normal)
         resetButton.titleLabel!.font = UIFont(name: "DIN Alternate",size: CGFloat(20))
         
@@ -107,7 +111,7 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {
-      var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+      var interstitial = GADInterstitial(adUnitID: "ca-app-pub-4698067178614890/6920068043")
         interstitial.delegate = self
       interstitial.load(GADRequest())
       return interstitial
@@ -176,29 +180,21 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
         sender.setBackgroundImage(UIImage(named:"Active.png"), for: .normal)
         sender.isEnabled = false
         if number == 9 {
-            button1.isEnabled = true
-            button1.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-            button2.isEnabled = true
-            button2.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-            button3.isEnabled = true
-            button3.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-            button4.isEnabled = true
-            button4.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-            button5.isEnabled = true
-            button5.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-            button6.isEnabled = true
-            button6.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-            button7.isEnabled = true
-            button7.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-            button8.isEnabled = true
-            button8.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-            button9.isEnabled = true
-            button9.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
+            for i in 0...8{
+                buttonArray[i].isEnabled = true
+                buttonArray[i].setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
+            }
             number = 0
         }
     }
     
     @IBAction func reset(){
+        
+        if timer != nil{
+            timer.invalidate()
+        }
+        
+        soundLabel.text = "音を選択"
         
         shortVibrate()
         
@@ -210,24 +206,13 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
         katiNumber = 0
         katiLabel.text = String(katiNumber)
         
-        button1.isEnabled = true
-        button1.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-        button2.isEnabled = true
-        button2.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-        button3.isEnabled = true
-        button3.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-        button4.isEnabled = true
-        button4.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-        button5.isEnabled = true
-        button5.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-        button6.isEnabled = true
-        button6.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-        button7.isEnabled = true
-        button7.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-        button8.isEnabled = true
-        button8.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-        button9.isEnabled = true
-        button9.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
+        
+        for i in 0...8{
+            buttonArray[i].isEnabled = true
+            buttonArray[i].setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
+            buttonArray[i].setTitle("", for: .normal)
+        }
+        
         number = 0
         
         player10.playSound(name: soundName)
@@ -238,11 +223,6 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
     @IBAction func sns(){
         
         shortVibrate()
-        
-        snsButton.setBackgroundImage(UIImage(named:"Active.png"), for: .normal)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.snsButton.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
-        }
         
         let text = "無限ぷちぷちで\(katiLabel.text!)回ぷちぷちしたよ。https://apps.apple.com/jp/app/%E7%84%A1%E9%99%90%E3%81%B7%E3%81%A1%E3%81%B7%E3%81%A1/id1498318394"
         let items = [text]
@@ -265,8 +245,6 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
         activityVc.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.width/2,y: 50,width: 0,height: 0);
         // UIAcitivityViewControllerを表示
         self.present(activityVc, animated: true, completion: nil)
-        
-        player11.playSound(name: soundName)
         
     }
     
@@ -359,18 +337,31 @@ class player{
 
 //ゲーム性のところ
 extension ViewController{
-    @IBAction func start(){
-        timeCount = 30.0
-        let timer = Timer.scheduledTimer(timeInterval: 0.01,
-                                     target: self,
-                                     selector: #selector(self.timerCounter),
-                                     userInfo: nil,
-                                     repeats: true)
-        buttonReset()
-        resetButton.setTitle("Restart", for: .normal)
+    @IBAction func gamePlay(){
+        shortVibrate()
+        
+        snsButton.setBackgroundImage(UIImage(named:"Active.png"), for: .normal)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.snsButton.setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
+        }
+        player11.playSound(name: soundName)
+        playMode = true
+        shortVibrate()
         
         if resetCount < 2{
+            katiNumber = 0
+            katiLabel.text = String(katiNumber)
             resetCount += 1
+            timeCount = 30.0
+            if timer != nil{
+                timer.invalidate()
+            }
+            timer = Timer.scheduledTimer(timeInterval: 0.01,
+                                         target: self,
+                                         selector: #selector(self.timerCounter),
+                                         userInfo: nil,
+                                         repeats: true)
+            buttonReset()
         }else{
             resetCount = 0
             if interstitial.isReady {
@@ -386,7 +377,7 @@ extension ViewController{
     @objc func timerCounter() {
         if timeCount > 0{
             timeCount -= 0.01
-            soundLabel.text = String(timeCount)
+            soundLabel.text = String(floor(timeCount*10)/10)
         }else{
             timeCount = 0
             soundLabel.text = String("終了")
@@ -395,6 +386,8 @@ extension ViewController{
                 buttonArray[i].setBackgroundImage(UIImage(named:"Active.png"), for: .normal)
                 buttonShuffledArray[i].setTitle("", for: .normal)
             }
+            timer.invalidate()
+//            sns()
         }
     }
     
@@ -408,13 +401,24 @@ extension ViewController{
         
         sender.setBackgroundImage(UIImage(named:"Active.png"), for: .normal)
         sender.isEnabled = false
-        if gameIndex < 8{
-            gameIndex = gameIndex + 1
-            buttonShuffledArray[gameIndex].isEnabled = true
+        if playMode{
+            if gameIndex < 8{
+                gameIndex = gameIndex + 1
+                buttonShuffledArray[gameIndex].isEnabled = true
+            }else{
+                buttonReset()
+            }
         }else{
-            buttonReset()
+            if number == 9 {
+                for i in 0...8{
+                    buttonArray[i].isEnabled = true
+                    buttonArray[i].setBackgroundImage(UIImage(named:"Inactive.png"), for: .normal)
+                }
+                number = 0
+            }
         }
     }
+    
     func buttonReset(){
         buttonShuffledArray = buttonArray.shuffled()
         gameIndex = 0
