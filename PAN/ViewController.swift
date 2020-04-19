@@ -110,17 +110,6 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
         interstitial.load(request)
     }
     
-    func createAndLoadInterstitial() -> GADInterstitial {
-      var interstitial = GADInterstitial(adUnitID: "ca-app-pub-4698067178614890/6920068043")
-        interstitial.delegate = self
-      interstitial.load(GADRequest())
-      return interstitial
-    }
-
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-      interstitial = createAndLoadInterstitial()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         if firstLaunchSaveData.object(forKey: "launch") != nil{
             firstLaunch = firstLaunchSaveData.object(forKey: "launch") as! Bool
@@ -143,26 +132,6 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
       
     }
     
-    func addBannerViewToView(_ bannerView: GADBannerView) {
-        bannerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bannerView)
-        view.addConstraints(
-            [NSLayoutConstraint(item: bannerView,
-                                attribute: .bottom,
-                                relatedBy: .equal,
-                                toItem: bottomLayoutGuide,
-                                attribute: .top,
-                                multiplier: 1,
-                                constant: 0),
-             NSLayoutConstraint(item: bannerView,
-                                attribute: .centerX,
-                                relatedBy: .equal,
-                                toItem: view,
-                                attribute: .centerX,
-                                multiplier: 1,
-                                constant: 0)
-        ])
-    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -430,5 +399,40 @@ extension ViewController{
             buttonShuffledArray[i].titleLabel!.font = UIFont(name: "DIN Alternate",size: CGFloat(24))
         }
         buttonShuffledArray[gameIndex].isEnabled = true
+    }
+}
+
+
+//Admob周り
+extension ViewController{
+    func createAndLoadInterstitial() -> GADInterstitial {
+      var interstitial = GADInterstitial(adUnitID: "ca-app-pub-4698067178614890/6920068043")
+        interstitial.delegate = self
+      interstitial.load(GADRequest())
+      return interstitial
+    }
+
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+      interstitial = createAndLoadInterstitial()
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+        ])
     }
 }
