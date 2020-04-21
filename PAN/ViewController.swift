@@ -69,10 +69,6 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
     @IBOutlet var resetButton:UIButton!
     @IBOutlet var snsButton:UIButton!
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -218,7 +214,6 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
     }
     
     @IBAction func changeSoundLeft(){
-        
         if soundIndex > 0 {
             soundIndex = soundIndex - 1
             soundName = soundArray[soundIndex]
@@ -250,9 +245,6 @@ class ViewController: UIViewController, GADBannerViewDelegate,GADInterstitialDel
     }
     
     func playSound(sender:UIButton){
-        
-      //  players[sender.tag-1].playSound(name: soundName)
-        
         switch sender.tag {
         case 1:
             player1.playSound(name: soundName)
